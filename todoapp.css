@@ -1,0 +1,766 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 23;
+    vertical-align: middle;
+}
+
+.check {
+    width: 18px;
+    height: 18px;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(17, 12, 12, 0.437);
+    border-radius: 10px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff, #e0f2fe);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 217, 255, 0.21);
+    padding: 23px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 1fr 180px 150px;
+    gap: 12px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    transition: .25s;
+    font-weight: 600;
+
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.add-task {
+    width: 240px;
+    padding: 8px 23px;
+    border-radius: 6px;
+    border: 1px solid black;
+    flex: 1;
+    max-width: 400px;
+}
+
+.add-task:focus {
+    outline: none;
+    border: 2px solid #2196f3;
+
+}
+.date{
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid black;
+    flex: 1;
+    max-width: 400px;
+}
+.date:focus {
+    outline: none;
+    border: 2px solid #2196f3;
+
+}
+.add {
+    padding: 6px 2px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+}
+
+.add:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+.finished {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.showPending-check {
+    width: 18px;
+    height: 18px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: .6;
+}
+
+.search {
+    /* width: 136px;
+    padding: 4px 5px; */
+    margin: 7px 8px 0px 9px;
+    border-radius: 10px;
+    border: none;
+    
+    width:92%;
+    padding:8px 12px;
+
+}
+
+.task {
+    max-height: 37vh;
+    float: left;
+    width: 642px;
+    overflow: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    background-color: rgba(105, 162, 191, 0.571);
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+li {
+    animation: fade .3s ease;
+}
+
+.text {
+
+    flex: 1;
+    min-width: 0;
+
+    text-align: left;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    margin-left: 8px;
+    font-size: 17px;
+}
+
+.status {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.no-date-status {
+    color: gray;
+}
+
+.completed-status {
+    color: #14d66e;
+}
+
+.overdue-status {
+    color: red;
+
+}
+
+.today-status {
+    color: rgb(255, 255, 0);
+}
+
+.tomorrow-status {
+    color: #0099ff;
+}
+
+.future-status {
+    color: purple;
+}
+
+.due-date {
+    font-size: 12px;
+    font-weight: 600;
+   margin: 7px 8px 6px 6px;
+}
+.status{
+       margin: 4px 0px 8px 0px
+}
+
+.edit {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: rgba(202, 64, 170, 0.804);
+}
+
+.delete {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: rgba(255, 13, 0, 0.484);
+}
+
+.delete:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.edit:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.add,
+.edit,
+.delete {
+    transition: 0.3s;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    transition: .4s;
+}
+
+.action {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+
+
+}
+
+.alldelete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+}
+
+.deleteAllTask {
+    padding: 6px 10px;
+    border-radius: 12px;
+    background-color: crimson;
+    font-weight: 700;
+    color: white;
+    border: none;
+}
+
+.footer {
+    display: flex;
+    gap: 23px;
+    margin: 28px 0px 10px 0px;
+    justify-content: center;
+}
+
+
+
+/* ===========================
+        DARK MODE
+=========================== */
+.theme {
+    display: flex;
+    justify-content: end;
+}
+
+body.dark {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark .container {
+
+    background: #111827;
+
+}
+
+/* Inputs */
+
+body.dark input[type="text"],
+body.dark input[type="date"] {
+
+    background: #334155;
+    color: white;
+    border: 1px solid #475569;
+}
+
+body.dark input::placeholder {
+    color: #cbd5e1;
+}
+
+/* Buttons */
+
+body.dark button {
+
+    background: #2563eb;
+    color: white;
+}
+
+body.dark button:hover {
+
+    background: #1d4ed8;
+}
+
+/* Task Card */
+body.dark ul li {
+
+    background: #1f2937;
+
+}
+
+/* Completed */
+
+body.dark .completed {
+
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+body.dark .progress-bar {
+
+    background: #374151;
+
+}
+
+/* Due Date */
+
+body.dark .due-date {
+
+    color: #cbd5e1;
+}
+
+/* Status */
+
+body.dark .completed-status {
+
+    color: #22c55e;
+    font-weight: 600;
+}
+
+body.dark .overdue-status {
+
+    color: #ef4444;
+    font-weight: 600;
+}
+
+body.dark .today-status {
+
+    color: #facc15;
+    font-weight: 600;
+}
+
+body.dark .tomorrow-status {
+
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+body.dark .future-status {
+
+    color: #a855f7;
+    font-weight: 600;
+}
+
+body.dark .no-date-status {
+
+    color: #94a3b8;
+}
+
+/* Delete Button */
+
+body.dark .delete {
+
+    color: #ef4444;
+}
+
+/* Edit Button */
+
+body.dark .edit {
+
+    color: #38bdf8;
+}
+
+/* Search */
+
+body.dark .search {
+
+    background: #334155;
+    color: white;
+}
+
+/* Empty Message */
+
+body.dark .first-task {
+
+    color: #cbd5e1;
+}
+
+body.dark .no {
+
+    color: #ef4444;
+}
+
+/* Footer */
+
+body.dark .footer {
+
+    color: #cbd5e1;
+}
+
+.theme-toggle button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#darkModeBtn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.progress-container {
+    margin: 15px 0px;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:700px) {
+
+    .container {
+        padding: 20px;
+    }
+
+   .input {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+
+    .add-task {
+        width: 91%;
+        max-width: none;
+        padding: 8px 23px;
+        font-size: 16px;
+    }
+
+    .task {
+        width: 100%;
+    }
+
+    .action {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+    .date{
+        width: 92%;
+    }
+    .add{
+        width: 100%;
+    }
+}
+
+/* =========================
+   Large Phone
+========================= */
+@media (max-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    .input {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+
+    .add-task {
+        width: 90%;
+        max-width: none;
+        padding: 8px 23px;
+        font-size: 16px;
+    }
+
+    .task {
+        width: 100%;
+    }
+
+    .action {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+   .date{
+        width: 92%;
+    }
+    .add{
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   Medium Phone
+========================= */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+   .input {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+
+    .task {
+        width: 100%;
+    }
+
+    .add-task {
+        width: 86%;
+        max-width: none;
+        padding: 8px 23px;
+        font-size: 16px;
+    }
+
+    .action {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        width: 84%;
+        text-align: center;
+    }
+    .date{
+        width: 92%;
+    }
+    .add{
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   Small Phone
+========================= */
+@media (max-width: 375px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .input {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+
+    .add-task {
+        width: 84%;
+        max-width: none;
+        padding: 8px 23px;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .action {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        width: 84%;
+        text-align: center;
+    }
+    .date{
+        width: 92%;
+    }
+    .add{
+        width: 100%;
+    }
+}
+
+/* =========================
+   Extra Small Phone
+========================= */
+@media (max-width: 340px) {
+    .container {
+        padding: 12px;
+    }
+
+    .action {
+        display: flex;
+        gap: 8px;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-task {
+        width: 81%;
+        max-width: none;
+        padding: 8px 23px;
+        font-size: 16px;
+    }
+
+    .input {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .text {
+        font-size: 13px;
+    }
+
+    .edit,
+    .delete {
+        padding: 5px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 18px;
+    }
+
+    #darkModeBtn {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .search {
+        width: 84%;
+        text-align: center;
+    }
+    .date{
+        width: 92%;
+    }
+    .add{
+        width: 100%;
+    }
+
+
+}

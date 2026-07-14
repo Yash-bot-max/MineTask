@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add your Daily task here</title>
+    <link rel="stylesheet" href="todoapp.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>📝 My Todo List</h1>
+        <p class="subtitle">
+            Stay organized and finish your daily goals.
+        </p>
+        <div class="input">
+            <input type="text" placeholder="Enter your task..." class="add-task">
+
+            <input type="date" class="due-date date" min="1900-01-01" max="9999-12-31">
+
+            <button class="add">
+                + Add Task
+            </button>
+        </div>
+        <div class="finished">
+            <input type="checkbox" id="showPending" class="showPending-check">
+            <label for="showPending">Show Unfinished Tasks</label>
+            <input type="text" placeholder="🔍 Search Task..." class="search">
+
+        </div>
+        <div class="no"></div>
+
+        <div class="task">
+            <!-- <ul>
+                <li> <input type="checkbox" name="" id="">
+                    <label for="task">${}</label>
+                    <div class="text">Task</div>
+
+                    <div class="action">
+                        <button class="edit"><span class="material-symbols-outlined">
+                                edit
+                            </span></button>
+                        <button class="delete"><span class="material-symbols-outlined">
+                                delete
+                            </span></button>
+                    </div>
+                </li>
+                
+            </ul> -->
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Progress</span>
+                <span class="progress-text">0%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+
+            </div>
+            <div class="ratio"></div>
+
+        </div>
+        <div class="alldelete">
+            <button class="deleteAllTask">
+                🗑 Delete All
+            </button>
+
+        </div>
+        <div class="first-task">No Task yet... <br></Yet>Add Your First Task.........</div>
+
+        <footer class="footer">
+            <div class="unfinished-task"></div>
+            <div class="total-task"></div>
+            <div class="finished-task"></div>
+
+        </footer>
+        <!-- Dark Mode -->
+        <div class="theme">
+            <button id="darkModeBtn">
+                🌙
+            </button>
+        </div>
+    </div>
+
+    <script src="todoapp.js"></script>
+</body>
+
+</html>
