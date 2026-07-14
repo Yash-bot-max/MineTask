@@ -1,3 +1,7 @@
+## 🌐 Live Demo
+
+https://minetask.netlify.app/
+
 # 📋 MineTask
 
 ![Home](screenshots/home.png)
